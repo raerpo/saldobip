@@ -1,9 +1,6 @@
-$('#consultar-bip').click(function(){
+$('.js-btn-query').click(function(){
   var numeroTarjeta = $('#numero-bip').val();
-  var $textButton = $(this).find('span');
-  var $spinner = $(this).find('.spinner');
-  $textButton.css('display','none');
-  $spinner.css('display','inline');
+  $(this).addClass('btn--active');
   $.ajax({
     url: '/consultar-saldo/' + numeroTarjeta,
     type: 'POST',
@@ -11,6 +8,9 @@ $('#consultar-bip').click(function(){
       $textButton.css('display','inline');
       $spinner.css('display','none');
       console.log(data);
+    },
+    error: function(){
+      $('.js-btn-query').removeClass('btn--active').blur();
     }
   });
 });

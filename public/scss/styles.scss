@@ -59,7 +59,7 @@ form{
     }
   }
 
-  a {
+  .btn {
     outline: none;
     font: 18px Helvetica, Arial, sans-serif;
     border: none;
@@ -80,9 +80,17 @@ form{
       background: #ECAB2F;
     }
   }
+  .btn--active{
+    span{
+      display: none;
+    }
+    .btn__loading{
+      display: inline;
+    }
+  }
 }
 
-.spinner {
+.btn__loading {
   margin: 100px auto 0;
   width: 70px;
   text-align: center;
@@ -90,7 +98,7 @@ form{
   display: none;
 }
 
-.spinner > div {
+.btn__loading > div {
   width: 18px;
   height: 18px;
   background-color: white;
@@ -101,12 +109,12 @@ form{
   animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
 
-.spinner .bounce1 {
+.btn__loading .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 
-.spinner .bounce2 {
+.btn__loading .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
