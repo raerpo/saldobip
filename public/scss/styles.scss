@@ -133,3 +133,39 @@ form{
     transform: scale(1.0);
   }
 }
+
+.notification{
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: hsl(39, 85%, 55%);
+  padding: .1em;
+  box-sizing: border-box;
+  line-height: .2em;
+  font-weight: lighter;
+  color: #333;
+  opacity: 0;
+  top: 50px;
+  transition: all .3s;
+  position: relative;
+}
+.notification--visible{
+  opacity: 1;
+  top: 0px;
+}
+.credits{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  padding: 0.3em;
+  font-size: 0.9em;
+  color: white;
+  a{
+    color: #F9B432;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
