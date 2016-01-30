@@ -496,3 +496,5 @@ form {
   .credits a {
     color: #F9B432;
     text-decoration: none; }
+    .credits a:hover {
+      text-decoration: underline; }
