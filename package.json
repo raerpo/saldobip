@@ -1,0 +1,22 @@
+{
+  "name": "saldobip",
+  "version": "1.0.0",
+  "description": "Aplicacion de nodejs usando express para saber el saldo de una tarjeta bip",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rafael Poveda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^2.0.1",
+    "node-sass-middleware": "^0.9.7",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-sass": "^2.1.1"
+  }
+}
