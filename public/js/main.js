@@ -1,6 +1,6 @@
 $('.js-btn-query').click(function(){
   var numeroTarjeta = $('#numero-bip').val();
-  $(this).addClass('btn--active');
+  $(this).addClass('btn--loading');
   $.ajax({
     url: '/consultar-saldo/' + numeroTarjeta,
     type: 'POST',
@@ -10,7 +10,7 @@ $('.js-btn-query').click(function(){
       console.log(data);
     },
     error: function(){
-      $('.js-btn-query').removeClass('btn--active').blur();
+      $('.js-btn-query').removeClass('btn--loading').blur();
     }
   });
 });

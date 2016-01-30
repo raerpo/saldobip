@@ -423,19 +423,19 @@ form {
       box-shadow: inset 0px 1px 0px #F9B432, 0px 3px 0px 0px #8E713B, 0px 5px 5px #336AAC;
       top: 2px;
       background: #ECAB2F; }
-  form .btn--active span {
+  form .btn--loading span {
     display: none; }
-  form .btn--active .btn__loading {
+  form .btn--loading .btn__spinner {
     display: inline; }
 
-.btn__loading {
+.btn__spinner {
   margin: 100px auto 0;
   width: 70px;
   text-align: center;
   display: inline;
   display: none; }
 
-.btn__loading > div {
+.btn__spinner > div {
   width: 18px;
   height: 18px;
   background-color: white;
@@ -444,11 +444,11 @@ form {
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
   animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
 
-.btn__loading .bounce1 {
+.btn__spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s; }
 
-.btn__loading .bounce2 {
+.btn__spinner .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s; }
 
