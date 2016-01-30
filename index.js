@@ -2,6 +2,8 @@ var express = require('express');
 var request = require('request');
 var app = express();
 
+app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static(__dirname + '/public'));
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
@@ -23,6 +25,6 @@ app.get('/', function(req, res){
 });
 
 
-app.listen(8080, function(){
-  console.log('App running in port 8080');
+app.listen(app.get('port'), function(){
+  console.log('App running in port ' + app.get('port'));
 });
