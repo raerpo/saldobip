@@ -492,10 +492,14 @@ form {
 .credits {
   position: absolute;
   bottom: 0px;
-  right: 0px;
+  width: 100%;
+  margin: 0px 0px 1em 0px;
+  text-align: center;
   padding: 0.3em;
   font-size: 0.9em;
-  color: white; }
+  color: white;
+  z-index: -1;
+  box-sizing: border-box; }
   .credits a {
     color: #F9B432;
     text-decoration: none; }
