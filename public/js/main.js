@@ -25,9 +25,11 @@ function renderCardInfo(cardState, cardCredit, $notificationContainer){
   }
 }
 
-$('.js-btn-query').click(function(){
+$('.js-btn-query').click(function(e){
+  e.preventDefault();
   var numeroTarjeta = $('#numero-bip').val();
   if( numeroTarjeta === "" || numeroTarjeta.length < 5 || numeroTarjeta.length > 10 || numeroTarjeta < 0){
+    $(this).blur();
     return false;
   }
   $(this).addClass('btn--loading');
