@@ -27,6 +27,9 @@ function renderCardInfo(cardState, cardCredit, $notificationContainer){
 
 $('.js-btn-query').click(function(){
   var numeroTarjeta = $('#numero-bip').val();
+  if( numeroTarjeta === "" || numeroTarjeta.length < 5 || numeroTarjeta.length > 10 || numeroTarjeta < 0){
+    return false;
+  }
   $(this).addClass('btn--loading');
   $.ajax({
     url: '/consultar-saldo/' + numeroTarjeta,
