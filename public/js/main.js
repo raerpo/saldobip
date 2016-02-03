@@ -29,9 +29,10 @@ $('.js-btn-query').click(function(e){
   e.preventDefault();
   var numeroTarjeta = $('#numero-bip').val();
   if( numeroTarjeta === "" || numeroTarjeta.length < 5 || numeroTarjeta.length > 10 || numeroTarjeta < 0){
-    $(this).blur();
+    $('#numero-bip').addClass('error').blur();
     return false;
   }
+  $('#numero-bip').removeClass('error');
   $(this).addClass('btn--loading');
   $.ajax({
     url: '/consultar-saldo/' + numeroTarjeta,
