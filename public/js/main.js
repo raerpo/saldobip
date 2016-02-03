@@ -38,7 +38,6 @@ $('.js-btn-query').click(function(){
       $('.js-btn-query').removeClass('btn--loading').blur();
       var cardData = JSON.parse(data);
       var cardState = cardData[0].estado;
-      var cardNumber = cardData[1].tarjeta;
       var cardCredit = cardData[1].saldo;
       renderCardInfo(cardState, cardCredit, $('.js-notification'));
       $('.js-notification').addClass('notification--visible');
